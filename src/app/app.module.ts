@@ -5,12 +5,21 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+import { Camera } from '@ionic-native/camera'
 import { HomePage } from '../pages/home/home';
+import { LogInPage } from '../pages/log-in/log-in';
+import { SignInPage } from '../pages/sign-in/sign-in';
+import { AddPage } from '../pages/add/add';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LogInPage,
+    SignInPage,
+    AddPage,
+    
   ],
   imports: [
     BrowserModule,
@@ -19,12 +28,18 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LogInPage,
+    SignInPage,
+    AddPage,
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera,
+    Geolocation
   ]
 })
 export class AppModule {}

@@ -1,0 +1,26 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center; background-color:#A7CDBD">
+      <h2 style="color:#8B5D33">Sign In</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding style="background-color:#869D7A">
+    <ion-list>
+  
+      <ion-item style="background-color:#BBE1C3">
+        <ion-input type="text" placeholder="Correo"[(ngModel)]="email"></ion-input>
+      </ion-item>
+  
+      <ion-item style="background-color:#BBE1C3">
+        <ion-input type="password" placeholder="Contraseña"[(ngModel)]="pwd"></ion-input>
+      </ion-item>
+  
+    </ion-list>
+  
+    <button ion-button block (click)="signin()" style="background-color: #7EBDC3; color:#ffffff">Sign In</button>
+  
+  </ion-content>
+  

@@ -1,14 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-toolbar>
+    <ion-title style="text-align: center; background-color:#8B5D33">
+      <h2 style="color:rgb(184, 230, 210)">Mis Árboles</h2>
     </ion-title>
-  </ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addA()" style="background-color:#8B5D33;color:rgb(184, 230, 210)">
+        <ion-icon name="add"></ion-icon>
+      </button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding style="background-color:#869D7A">
+  <ion-card *ngFor="let item of items" style="background-color:#BBE1C3">
+    <ion-item style="background-color:#BBE1C3">
+      <ion-thumbnail start>
+        <img src="{{item.foto}}" >
+      </ion-thumbnail>
+    </ion-item>
+    <h2>Tipo de Arbol: {{item.tipo}}</h2>
+    <h2>Posición Geográfica: {{item.longitud}}, {{item.latitud}}</h2>
+    <h2>Ancho de copa: {{item.copa}}</h2>
+    <h2>Ancho de Tronco: {{item.tronco}}</h2>
+  </ion-card>
 </ion-content>

@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center; background-color:#8B5D33">
+      <h2 style="color:rgb(184, 230, 210)">Añadir Árbol</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:#869D7A">
+  <ion-list>
+
+    <ion-item style="background-color:#BBE1C3">
+      <ion-input type="text" placeholder="Tipo de Árbol"[(ngModel)]="tipo" ></ion-input>
+      </ion-item>
+
+    <ion-item style="background-color:#BBE1C3">
+      <ion-input type="text" placeholder="Ancho de Copa"[(ngModel)]="copa"></ion-input>
+    </ion-item>
+
+    <ion-item style="background-color:#BBE1C3">
+      <ion-input type="text" placeholder="Ancho del Tronco"[(ngModel)]="tronco"></ion-input>
+    </ion-item>
+
+    <ion-item style="background-color:#BBE1C3">
+      <button ion-button block (click)="tfoto()" style="background-color: #7EBDC3; color:#ffffff">Tomar Foto</button>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button block (click)="agregar()" style="background-color: #7EBDC3; color:#ffffff">Agregar</button>
+
+</ion-content>
